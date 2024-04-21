@@ -1,0 +1,21 @@
+
+name: hello-world
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Hello World!"
+      - name: Send email notification
+        if: ${{ success() }}
+        uses: dawidd6/action-send-mail@v2
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ssanthosh2k3@gmail.com
+          password: rjwa nkew dppf iici
+          subject: 'Pipeline execution successful'
+          body: 'Yourihbibiibiiinninnin please leave gts.'
+          to: '2232k02@kgcas.com'
+          from: 'ssanthosh2k3@gmail.com'
